@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #F7F4EF;
   --foreground: #171717;
 }
+
+.font-rajdhani {
+  font-family: var(--font-rajdhani-bold);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins-regular);
+}
+
 
 @theme inline {
   --color-background: var(--background);
