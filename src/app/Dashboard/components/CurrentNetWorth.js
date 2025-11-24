@@ -1,12 +1,14 @@
-export default function CurrentNetWorth() {
+export default function CurrentNetWorth({ netWorth, change, changeAmount }) {
     return (
-        <div className="border-[#3E076C] border-3 px-4 py-4 rounded-lg mt-7 shadow-lg mx-auto">
-            <p className="text-[#3E076C] text-xl font-syne font-bold">Current Net Worth</p>
+        <div className="border-[#3E076C] border-2 px-6 py-6 rounded-lg shadow-lg h-full flex flex-col justify-between">
+            <p className="text-[#3E076C] text-lg font-syne font-bold">Current Net Worth</p>
 
-            <p className="text-[#FFBF47] text-4xl font-syne font-semibold mt-3">Rp15.000.000</p>
+            <p className="text-[#FFBF47] text-5xl font-syne font-semibold my-4">
+                Rp{netWorth.toLocaleString('id-ID')}
+            </p>
 
-            <p className="text-[#2E8B57] text-[13px] font-poppins mt-2">
-                +Rp1.000.000 since last month, Keep the momentum.
+            <p className={`text-sm font-poppins flex items-center gap-1 ${change >= 0 ? 'text-[#2E8B57]' : 'text-[#DE5959]'}`}>
+                {change >= 0 ? '+' : ''}Rp{changeAmount.toLocaleString('id-ID')} since last month, Keep the momentum.
             </p>
         </div>
     );
