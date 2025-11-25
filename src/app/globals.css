@@ -13,6 +13,9 @@
   font-family: var(--font-poppins-regular);
 }
 
+.font-syne {
+  font-family: var(--font-syne);
+}
 
 @theme inline {
   --color-background: var(--background);

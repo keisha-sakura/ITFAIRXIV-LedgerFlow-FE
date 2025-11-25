@@ -11,10 +11,15 @@ const poppinRegular = localFont({
   variable: "--font-poppins-regular",
 });
 
+const syne = localFont({
+  src: "../font/Syne-VariableFont_wght.ttf",
+  variable: "--font-syne",
+});
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${rajdhaniBold.variable} ${poppinRegular.variable}`}>
+      <body className={`${rajdhaniBold.variable} ${poppinRegular.variable} ${syne.variable}`}>
         {children}
       </body>
     </html>
