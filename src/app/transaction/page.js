@@ -6,15 +6,24 @@ import MonthSelector from './components/MonthSelector';
 import RecentTransactions from './components/RecentTransactions';
 import NavBar from '../components/Navbar';
 import CurrentNetWorth from '../dashboard/components/CurrentNetWorth';
-import dashboardData from '../dashboard/dashboardData';
 import transactionsData from './transactionsData';
 
 
 const TransactionFlowPage = () => {
   const [selectedMonth, setSelectedMonth] = useState('Nov');
 
+  const [dashboardData, setDashboardData] = useState({
+    userName: "Kiwi",
+    netWorth: 15000000,
+    netWorthChange: 1000000,
+    netWorthChangePercent: 7.14,
+    aiScore: 78,
+    aiScoreChange: -1
+  });
+
   return (
     <>
+
       <div className="min-h-screen bg-[#F7F4EF]">
         <NavBar />
 
