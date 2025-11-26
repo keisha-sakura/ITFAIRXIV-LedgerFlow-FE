@@ -37,8 +37,8 @@ export default function NavBar() {
             <nav className="font-poppins absolute left-1/2 -translate-x-1/2 flex items-center justify-center bg-[#3E076C] rounded-4xl text-[#F7F4EF] text-sm py-2 px-7 shadow-[0_0_10px_4px_rgba(255,191,71,0.5)]
     ">
                 <ul className="flex gap-10 items-center justify-center">
-                <li className={pathname === "/dashboard" ? "font-bold" : ""}>
-                    <Link className="hover:font-semibold transition-all" href="/dashboard">Dashboard</Link>
+                <li className={pathname === "/Dashboard" ? "font-bold" : ""}>
+                    <Link className="hover:font-semibold transition-all" href="/Dashboard">Dashboard</Link>
                 </li>
 
                 <li className={pathname === "/transaction" ? "font-bold" : ""}>
