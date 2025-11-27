@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import bell from "lucide-react";
 
 export default function NavBar() {
     const pathname = usePathname();
@@ -53,7 +54,7 @@ export default function NavBar() {
                     <Link className="hover:font-semibold transition-all" href="/analyst">Analyst</Link>
                 </li>
 
-                <li className="bg-[#FFBF47] text-[#3E076C] px-4 py-1 rounded-full">
+                <li className={pathname === "/profile" ? "bg-[#FFBF47] text-[#3E076C] px-4 py-1 rounded-full font-bold" : "bg-[#FFBF47] text-[#3E076C] px-4 py-1 rounded-full"}>
                     <Link href="/profile">user@example.com</Link>
                 </li>
                 </ul>
