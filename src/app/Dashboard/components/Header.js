@@ -13,11 +13,11 @@ export default function Header() {
                 Stop Tracking, Start Flowing.</p>
 
              <div className="flex felx-col items-center gap-5">
-                <button className="bg-[#FFBF47] text-[#241838] font-syne px-6 py-3 rounded-full font-bold mt-5">
+                <button className="bg-[#FFBF47] text-[#241838] font-syne px-6 py-3 rounded-full font-bold mt-5 hover:bg-[#3E076C] hover:text-[#FFBF47] cursor:ppinter">
                     <Link href="/transaction">Explore Full Flow</Link>
                 </button>
 
-                <button className="text-[#241838] border-[#FFBF47] border-2 font-syne px-7 py-3 rounded-full font-bold mt-5">
+                <button className="text-[#241838] border-[#FFBF47] border-2 font-syne px-7 py-3 rounded-full font-bold mt-5 hover:bg-[#3E076C] hover:text-[#FFBF47]">
                     <Link href="/budgeting">Create Budget</Link>
                 </button>
              </div>
