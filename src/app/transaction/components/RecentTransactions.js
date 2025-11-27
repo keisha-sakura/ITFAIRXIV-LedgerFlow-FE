@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 
 export const RecentTransactions = ({ transactions, selectedMonth }) => {
   const filteredTransactions = selectedMonth === 'all' 
@@ -54,8 +55,8 @@ export const RecentTransactions = ({ transactions, selectedMonth }) => {
                   <td className="font-syne py-3 px-2 text-gray-700">{transaction.source}</td>
                   <td className="font-syne py-3 px-2 text-gray-700">{transaction.proofId}</td>
                   <td className="py-3 px-2">
-                    <button className="font-syne text-blue-500 hover:text-blue-700 text-xs font-medium">
-                      view
+                    <button className="font-syne text-blue-500 hover:text-blue-700 text-xs font-medium cursor-pointer hover:underline">
+                      <Link href="/transaction/view">view</Link>
                     </button>
                   </td>
                 </tr>

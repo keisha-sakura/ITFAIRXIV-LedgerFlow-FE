@@ -5,7 +5,7 @@ import MonthlyCashFlow from './components/MonthlyCashFlow';
 import MonthSelector from './components/MonthSelector';
 import RecentTransactions from './components/RecentTransactions';
 import NavBar from '../components/Navbar';
-import CurrentNetWorth from '../dashboard/components/CurrentNetWorth';
+import CurrentNetWorth from '../Dashboard/components/CurrentNetWorth';
 import transactionsData from './transactionsData';
 
 
