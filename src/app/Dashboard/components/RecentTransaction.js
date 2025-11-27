@@ -9,7 +9,7 @@ export default function DashboardRecentTransaction({ transactions }) {
         <p className="font-syne text-[#3E076C] text-xl font-bold">Recent Transactions</p>
         <Link 
           href="/transaction"
-          className="text-[#0077CC] font-semibold hover:text-[#FFBF47] transition"
+          className="text-[#0077CC] font-semibold font-poppins hover:text-[#FFBF47] transition"
         >
           View All
         </Link>
