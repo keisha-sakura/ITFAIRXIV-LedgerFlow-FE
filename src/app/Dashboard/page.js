@@ -4,10 +4,12 @@ import { useState } from "react";
 
 import Navbar from "@/app/components/Navbar";
 import Header from "./components/Header";
-import CurrentNetWorth from "./components/CurrentNetWorth";
-import AIFinancialScore from "./components/AIFinancialScore";
-import RecentTransaction from "./components/RecentTransaction";
+import CurrentNetWorth from "../transaction/components/CurrentNetWorth";
+import AIFinancialScore from "../analyst/components/AIFinancialScore";
+import DashboardRecentTransaction from "./components/RecentTransaction";
 import MonthlyBudgetFlow from "./components/MonthlyBudgetFlow";
+import transactionsData from "../transaction/transactionsData"; 
+import budgetData from "../budgeting/BudgetData"; 
 
 export default function DashboardPage() {
   const [dashboardData, setDashboardData] = useState({
@@ -16,37 +18,7 @@ export default function DashboardPage() {
     netWorthChange: 1000000,
     netWorthChangePercent: 7.14,
     aiScore: 78,
-    aiScoreChange: -1,
-    transactions: [
-      {
-        status: "Confirmed",
-        description: "Kantin Boga Labtek V",
-        date: "17 Nov 2025",
-        category: "Food",
-        amount: 25000,
-        source: "BNI BCA Digital"
-      },
-      {
-        status: "Pending",
-        description: "Kantin OG Barat",
-        date: "18 Nov 2025",
-        category: "Food",
-        amount: 20000,
-        source: "BNI"
-      }
-    ],
-    budgetFlow: [
-      {
-        category: "Food",
-        spent: 150000,
-        budget: 2000000
-      },
-      {
-        category: "Transportation",
-        spent: 50000,
-        budget: 600000
-      }
-    ]
+    aiScoreChange: -1
   });
 
   return (
@@ -69,11 +41,11 @@ export default function DashboardPage() {
         </div>
 
         <div className="mb-8">
-          <RecentTransaction transactions={dashboardData.transactions} />
+          <DashboardRecentTransaction transactions={transactionsData} />
         </div>
 
         <div className="mb-8">
-          <MonthlyBudgetFlow budgetData={dashboardData.budgetFlow} />
+          <MonthlyBudgetFlow budgetData={budgetData} />
         </div>
       </div>
     </div>
