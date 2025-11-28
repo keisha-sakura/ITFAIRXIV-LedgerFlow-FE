@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Navbar from "@/app/components/Navbar";
 import Header from "./components/Header";
@@ -20,6 +20,14 @@ export default function DashboardPage() {
     aiScore: 78,
     aiScoreChange: -1
   });
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      window.location.href = "/login";
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#F7F4EF]">
